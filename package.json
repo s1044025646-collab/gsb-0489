@@ -1,0 +1,19 @@
+{
+  "name": "fastq-paired-trimmer",
+  "version": "1.0.0",
+  "description": "Windows 本地 FASTQ 双端滑窗质量裁剪与配对去向核验后端（API + CLI）",
+  "type": "module",
+  "bin": {
+    "fastq-trim": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server/index.js",
+    "test": "npm run build && node --experimental-strip-types --test \"test/*.test.ts\"",
+    "demo": "npm run build && node dist/demo/run-demo.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "devDependencies": {}
+}
