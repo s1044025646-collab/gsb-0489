@@ -1,0 +1,33 @@
+{
+  "name": "fastq-paired-trimmer",
+  "version": "1.0.0",
+  "description": "Windows-local paired FASTQ sliding-window quality trimming backend",
+  "type": "module",
+  "main": "dist/src/server.js",
+  "bin": {
+    "fastq-trim": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test test/*.test.ts",
+    "start": "node --no-warnings dist/src/server.js",
+    "dev": "node --no-warnings --import tsx src/server.ts",
+    "demo": "node --no-warnings dist/scripts/demo.js"
+  },
+  "keywords": [
+    "fastq",
+ "paired-end",
+ "quality-trimming"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0"
+  },
+  "engines": {
+    "node": ">=25.0.0"
+  }
+}
